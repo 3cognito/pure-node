@@ -1,0 +1,28 @@
+{
+  "name": "pure-node-server",
+  "version": "1.0.0",
+  "description": "simple nodej server without any frameworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && nodemon ./dist/index.js",
+    "start": "npm run build && node ./dist/index.js",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "clean": "rm -rf ./dist"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "3cognito",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.3.1"
+  }
+}
